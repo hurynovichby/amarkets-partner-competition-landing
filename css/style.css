@@ -1,7 +1,7 @@
 /* Конфигурация проекта */
 
 /* Подключение шрифта Helvetica Neue Cyr */
-@import url('../fonts/HelveticaNeueCyr/stylesheet.css');
+@import url("../fonts/HelveticaNeueCyr/stylesheet.css");
 
 /* Определение переменных */
 :root {
@@ -9,6 +9,7 @@
   --main-color: #fb7101;
   --light-main-color: #fff1e6;
   --text-color: #000;
+  --title-color: #111827;
 }
 
 /* Общие стили для контейнера */
@@ -20,14 +21,19 @@
 
 /* Основной стиль для фона */
 body {
-  background-color: var(--light-main-color);
+  background-color: white;
   color: var(--text-color);
-  font-family: 'Helvetica Neue Cyr', sans-serif; /* Применение шрифта */
+  font-family: "Helvetica Neue Cyr", sans-serif; /* Применение шрифта */
   line-height: 1.6;
 }
 
 /* Стили для заголовков */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-color);
 }
 
@@ -39,4 +45,79 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.countdown {
+  background-color: var(--light-main-color);
+  padding: 24px 120px;
+}
+.countdown__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.countdown__text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+}
+.countdown__text {
+  max-width: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: var(--title-color);
+}
+.countdown__sub-text {
+  max-width: 160px;
+  font-size: 18px;
+  line-height: 1.33;
+  color: var(--title-color);
+}
+
+.countdown__timer {
+  display: flex;
+  gap: 16px;
+}
+.countdown__timer-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.countdown__timer-number {
+  width: 46px;
+  height: 46px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 16px;
+  background-color: #fee3cc;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.9px;
+  color: #111827;
+}
+.countdown__timer-label {
+  font-size: 14px;
+  line-height: 1.86;
+  color: #111827;
+}
+
+.countdown__close {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  border: solid 1px #ffe3cd;
+  transition: border .2s ease-in-out;
+}
+.countdown__close:hover {
+  border-color: var(--main-color);
 }
