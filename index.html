@@ -1,11 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конкурс</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+    <div class="countdown">
+        <div class="countdown__text">Успейте принять участие в конкурсе</div>
+        <div class="countdown__text">до конца конкурса осталось</div>
+        <div class="countdown__timer">
+            <div class="countdown__timer-days">00</div>
+            <div class="countdown__timer-hours">00</div>
+            <div class="countdown__timer-minutes">00</div>
+        </div>
+        <div class="countdown__close">×</div>
+    </div>
+
+    <header class="header">
+        <div class="header__logo">Логотип</div>
+        <nav class="header__nav">
+            <a href="#" class="header__nav-item">О конкурсе</a>
+            <a href="#" class="header__nav-item">Инвестиции</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__text">
+                <div class="hero__subtitle">Партнерский Марафон — Зимний Сезон</div>
+                <h1 class="hero__title">Конкурс для партнеров</h1>
+                <div class="hero__description">Станьте самым активным партнером в ноябре 2021 – январе 2022<br>И выиграйте крутые призы от AMarkets!</div>
+                <button class="hero__button">Принять участие</button>
+            </div>
+            <div class="hero__image">
+                <img src="image.jpg" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="slider">
+        <h2 class="slider__title">Инвестируйте в акции популярных компаний</h2>
+        <div class="slider__subtitle">Зарабатывайте на росте и падении, а также получайте до 8.3% годовых в валюте в виде дивидентов</div>
+        <div class="slider__container">
+            <div class="slider__item">
+                <div class="slider__item-content">
+                    <div class="slider__item-header">
+                        <div class="slider__item-title">Tesla</div>
+                        <div class="slider__item-ticker">TSLA.US</div>
+                    </div>
+                    <div class="slider__item-footer">
+                        <div class="slider__item-text">Last year</div>
+                        <div class="slider__item-percentage">+913%</div>
+                    </div>
+                </div>
+                <div class="slider__item-logo">
+                    <img src="tesla-logo.png" alt="Tesla Logo">
+                </div>
+            </div>
+            <!-- Другие элементы слайдера -->
+        </div>
+        <button class="slider__button">Регистрация</button>
+    </section>
+
+    <div class="modal">
+        <div class="modal__content">
+            <form class="modal__form">
+                <div class="modal__field">
+                    <label for="name" class="modal__label">Имя*</label>
+                    <input type="text" id="name" class="modal__input">
+                </div>
+                <div class="modal__field">
+                    <label for="surname" class="modal__label">Фамилия*</label>
+                    <input type="text" id="surname" class="modal__input">
+                </div>
+                <div class="modal__field">
+                    <label for="email" class="modal__label">E-mail*</label>
+                    <input type="email" id="email" class="modal__input">
+                </div>
+                <div class="modal__checkbox">
+                    <input type="checkbox" id="agreement" class="modal__checkbox-input" checked>
+                    <label for="agreement" class="modal__checkbox-label">Я прочел и принимаю условия Клиентского соглашения, Политики конфиденциальности и Политики возврата денежных средств</label>
+                </div>
+                <button type="submit" class="modal__submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
