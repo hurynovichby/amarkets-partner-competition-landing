@@ -1,0 +1,73 @@
+/* Стили для очень больших экранов (десктопы с высоким разрешением) до 1200px */
+@media (max-width: 1200px) {
+  .countdown {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .countdown__text {
+    max-width: 180px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.33;
+    color: var(--title-color);
+  }
+  .countdown__sub-text {
+    max-width: 140px;
+    font-size: 14px;
+  }
+}
+
+/* Стили для больших экранов (десктопы) до 992px */
+@media (max-width: 992px) {
+  .countdown__sub-text {
+    display: none;
+  }
+  .countdown__text {
+    max-width: 100%;
+  }
+  .countdown__wrap {
+    gap: 15px;
+  }
+  .countdown__close {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Стили для средних экранов (планшеты) до 768px */
+@media (max-width: 768px) {
+  .countdown__timer {
+    gap: 10px;
+  }
+  .countdown__timer-number {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .countdown__wrap {
+    flex-wrap: wrap;
+  }
+  .countdown__text-wrapper {
+    width: 100%;
+    align-items: center;
+    gap: 31px;
+  }
+  .countdown__text {
+    max-width: 320px;
+    font-size: 14px;
+  }
+}
+
+/* Стили для малых экранов (смартфоны) до 576px */
+@media (max-width: 576px) {
+  .countdown__wrap {
+    gap: 10px;
+  }
+}
+
+/* Стили для малых экранов (смартфоны) 320px */
+@media (max-width: 320px) {
+  .countdown__wrap {
+    gap: 10px;
+  }
+}

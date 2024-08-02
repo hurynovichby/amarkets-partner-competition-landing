@@ -49,7 +49,7 @@ a:hover {
 
 .countdown {
   background-color: var(--light-main-color);
-  padding: 24px 120px;
+  padding: 24px 0;
 }
 .countdown__wrap {
   display: flex;
