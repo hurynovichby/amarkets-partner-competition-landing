@@ -3,7 +3,40 @@
 /* Подключение шрифта Helvetica Neue Cyr */
 @import url('../fonts/HelveticaNeueCyr/stylesheet.css');
 
+/* Определение переменных */
+:root {
+  --container-width: 1200px;
+  --main-color: #fb7101;
+  --light-main-color: #fff1e6;
+  --text-color: #000;
+}
+
+/* Общие стили для контейнера */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px; /* Дополнительные отступы по бокам */
+}
+
 /* Основной стиль для фона */
 body {
+  background-color: var(--light-main-color);
+  color: var(--text-color);
   font-family: 'Helvetica Neue Cyr', sans-serif; /* Применение шрифта */
+  line-height: 1.6;
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+/* Стили для ссылок */
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
