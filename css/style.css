@@ -1,0 +1,9 @@
+/* Конфигурация проекта */
+
+/* Подключение шрифта Helvetica Neue Cyr */
+@import url('../fonts/HelveticaNeueCyr/stylesheet.css');
+
+/* Основной стиль для фона */
+body {
+  font-family: 'Helvetica Neue Cyr', sans-serif; /* Применение шрифта */
+}
