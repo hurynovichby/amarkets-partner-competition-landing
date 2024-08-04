@@ -7,6 +7,7 @@
 :root {
   --container-width: 1200px;
   --main-color: #fb7101;
+  --main-color-darken: #da6200;
   --light-main-color: #fff1e6;
   --text-color: #000;
   --title-color: #111827;
@@ -39,14 +40,21 @@ h6 {
 
 /* Стили для ссылок */
 a {
+  cursor: pointer;
   color: var(--main-color);
   text-decoration: none;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 a:hover {
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--main-color-darken);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
 }
 
 /* countdown */
@@ -148,4 +156,66 @@ a:hover {
 }
 .header__nav-item.active {
   border-bottom: 2px solid var(--main-color);
+}
+
+/* HERO */
+.hero {
+  padding-top: 100px;
+}
+.hero__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__text {
+  max-width: 567px;
+}
+.hero__subtitle {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.hero__title {
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 64px;
+  text-align: left;
+  color: var(--title-color);
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.hero__description {
+  font-size: 18px;
+  line-height: 32px;
+  text-align: left;
+  color: var(--title-color);
+  margin-bottom: 26px;
+}
+.hero__description p {
+  margin: 0;
+}
+.hero__button {
+  width: 325px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 80px;
+  border-radius: 100px;
+  background-color: var(--main-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+.hero__button:hover {
+  background-color: var(--main-color-darken);
+}
+.hero__image {
+  padding-right: 46px;
+  transform: translateY(-13px);
 }
