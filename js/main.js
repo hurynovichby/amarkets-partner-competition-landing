@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
 
-        document.querySelectorAll(".header__nav-item").forEach((item) =>
-          item.classList.remove("active")
-        );
+        document
+          .querySelectorAll(".header__nav-item")
+          .forEach((item) => item.classList.remove("active"));
 
         this.classList.add("active");
 
@@ -96,21 +96,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция для управления бургер-меню
   function initializeBurgerMenu() {
-    const burger = document.querySelector('.header__burger');
-    const nav = document.querySelector('.header__nav');
-    const navItems = document.querySelectorAll('.header__nav-item');
+    const burger = document.querySelector(".header__burger");
+    const nav = document.querySelector(".header__nav");
+    const navItems = document.querySelectorAll(".header__nav-item");
 
-    burger.addEventListener('click', function () {
-      nav.classList.toggle('active');
-      burger.classList.toggle('active');
+    burger.addEventListener("click", function () {
+      nav.classList.toggle("active");
+      burger.classList.toggle("active");
     });
 
     navItems.forEach((item) => {
-      item.addEventListener('click', function () {
-        nav.classList.remove('active');
-        burger.classList.remove('active');
+      item.addEventListener("click", function () {
+        nav.classList.remove("active");
+        burger.classList.remove("active");
       });
     });
+  }
+
+  // Функция обратного отсчёта 
+  function initializeCountdown(endDateString) {
+    const endDate = new Date(endDateString);
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeDifference = endDate - now;
+
+      if (timeDifference <= 0) {
+        document.querySelector("#days").textContent = "0";
+        document.querySelector("#hours").textContent = "0";
+        document.querySelector("#minutes").textContent = "0";
+        return;
+      }
+
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+      );
+
+      document.querySelector("#days").textContent = days;
+      document.querySelector("#hours").textContent = hours;
+      document.querySelector("#minutes").textContent = minutes;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
   }
 
   // Инициализация всех функций
@@ -119,4 +151,5 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeSmoothScroll();
   initializeScrollSpy();
   initializeBurgerMenu();
+  initializeCountdown("2024-08-15T00:00:00");
 });
