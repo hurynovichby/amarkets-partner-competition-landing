@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Функция обратного отсчёта 
-  function initializeCountdown(endDateString) {
+  function initTimer(endDateString) {
     const endDate = new Date(endDateString);
 
     function updateCountdown() {
@@ -151,5 +151,5 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeSmoothScroll();
   initializeScrollSpy();
   initializeBurgerMenu();
-  initializeCountdown("2024-08-15T00:00:00");
+  initTimer("2024-08-15T00:00:00");
 });
