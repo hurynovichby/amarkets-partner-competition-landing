@@ -282,8 +282,23 @@ button.button:hover {
   display: flex;
   justify-content: space-between;
   padding: 26px 23px 22px 31px;
-  
+  background-color: #e7e7e7;
+}
+
+.slider__item--dark {
   background-image: linear-gradient(to right, #313131 50%, #444);
+}
+
+.slider__item--lime {
+  background-image: linear-gradient(to right, #77b900 3%, #70ae00 100%);
+}
+
+.slider__item--green {
+  background-image: linear-gradient(to right, #009a66 50%, #07c887);
+}
+
+.slider__item--gray {
+  background-image: linear-gradient(to right, #bbb 52%, #e7e7e7 104%);
 }
 
 .slider__item-content {
