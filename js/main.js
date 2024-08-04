@@ -54,4 +54,49 @@ document.addEventListener("DOMContentLoaded", function () {
       modalOverlay.style.display = "none";
     }
   });
+
+  document.querySelectorAll(".header__nav-item").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Удаление класса active у всех элементов
+      document
+        .querySelectorAll(".header__nav-item")
+        .forEach((item) => item.classList.remove("active"));
+
+      // Добавление класса active к текущему элементу
+      this.classList.add("active");
+
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      window.scrollTo({
+        top:
+          targetElement.offsetTop -
+          document.querySelector(".header").offsetHeight,
+        behavior: "smooth",
+      });
+    });
+  });
+
+  // Обработчик для изменения активного пункта при скролле
+  window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section");
+    let scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+    sections.forEach((section) => {
+      if (
+        scrollPos >=
+        section.offsetTop - document.querySelector(".header").offsetHeight
+      ) {
+        let id = section.getAttribute("id");
+        document.querySelectorAll(".header__nav-item").forEach((item) => {
+          item.classList.remove("active");
+          if (item.getAttribute("href").substring(1) === id) {
+            item.classList.add("active");
+          }
+        });
+      }
+    });
+  });
 });

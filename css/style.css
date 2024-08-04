@@ -179,9 +179,10 @@ button.button:hover {
   line-height: 24px;
   color: var(--title-color);
   transition: border 0.2s ease-in-out;
+  border-bottom: 2px solid transparent;
 }
 .header__nav-item.active {
-  border-bottom: 2px solid var(--main-color);
+  border-color: var(--main-color);
 }
 
 /* HERO */
@@ -247,7 +248,7 @@ button.button:hover {
 /* slider */
 .slider {
   padding-top: 45px;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
 }
 .slider__title-block {
   max-width: 575px;
