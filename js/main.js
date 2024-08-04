@@ -99,4 +99,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  var burger = document.querySelector('.header__burger');
+  var nav = document.querySelector('.header__nav');
+  var navItems = document.querySelectorAll('.header__nav-item');
+
+  burger.addEventListener('click', function() {
+    nav.classList.toggle('active');
+    burger.classList.toggle('active');
+  });
+
+  navItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      nav.classList.remove('active');
+      burger.classList.remove('active');
+    });
+  });
 });
