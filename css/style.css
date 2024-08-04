@@ -265,15 +265,19 @@ button.button:hover {
 .slider__container {
   margin-bottom: 86px;
 }
+.slider__container .swiper-slide {
+  width: 289px;
+  border-radius: 10px;
+  overflow: hidden;
+}
 .slider__item {
   display: flex;
   justify-content: space-between;
-  max-width: 235px;
-  margin: 0 56px 0 0;
   padding: 26px 23px 22px 31px;
-  border-radius: 10px;
+  
   background-image: linear-gradient(to right, #313131 50%, #444);
 }
+
 .slider__item-content {
   display: flex;
   flex-direction: column;
@@ -320,4 +324,9 @@ button.button:hover {
   object-fit: contain;
 }
 .slider__button {
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
 }
