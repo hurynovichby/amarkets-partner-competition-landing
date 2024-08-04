@@ -56,6 +56,23 @@ button {
   border: none;
   box-shadow: none;
 }
+button.button {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 80px;
+  border-radius: 100px;
+  background-color: var(--main-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+button.button:hover {
+  background-color: var(--main-color-darken);
+}
 
 /* countdown */
 .countdown {
@@ -161,12 +178,12 @@ button {
 /* HERO */
 .hero {
   padding-top: 100px;
+  margin-bottom: 50px;
 }
 .hero__content {
   display: flex;
   justify-content: space-between;
 }
-
 .hero__text {
   max-width: 567px;
 }
@@ -210,7 +227,7 @@ button {
   font-weight: 500;
   line-height: 20px;
   color: white;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .hero__button:hover {
   background-color: var(--main-color-darken);
@@ -218,4 +235,89 @@ button {
 .hero__image {
   padding-right: 46px;
   transform: translateY(-13px);
+}
+
+/* slider */
+.slider {
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+.slider__title-block {
+  max-width: 575px;
+  margin-bottom: 80px;
+}
+.slider__title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 20px;
+}
+.slider__subtitle {
+  max-width: 555px;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: left;
+  color: #000;
+  letter-spacing: -0.2px;
+}
+.slider__container {
+  margin-bottom: 86px;
+}
+.slider__item {
+  display: flex;
+  justify-content: space-between;
+  max-width: 235px;
+  margin: 0 56px 0 0;
+  padding: 26px 23px 22px 31px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #313131 50%, #444);
+}
+.slider__item-content {
+  display: flex;
+  flex-direction: column;
+}
+.slider__item-header {
+  color: white;
+  margin-bottom: 36px;
+}
+.slider__item-title {
+  font-size: 20px;
+}
+.slider__item-ticker {
+  font-size: 16px;
+  font-weight: 300;
+}
+.slider__item-footer {
+  color: white;
+}
+.slider__item-text {
+  font-size: 10px;
+  font-weight: 300;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.slider__item-percentage {
+  font-size: 20px;
+  font-weight: bold;
+}
+.slider__item-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  flex-grow: 0;
+  border-radius: 50%;
+  background-color: white;
+  margin: 6px 3px 0 0;
+}
+.slider__item-logo img {
+  width: 35px;
+  height: 35px;
+  flex-grow: 0;
+  object-fit: contain;
+}
+.slider__button {
 }
