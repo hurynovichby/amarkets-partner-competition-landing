@@ -64,6 +64,9 @@
 
 /* Стили для средних экранов (планшеты) до 768px */
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 50px;
+  }
   .countdown__timer {
     gap: 10px;
   }
@@ -157,14 +160,30 @@
 
   .header__nav.active {
     display: flex;
-        gap: 0;
-        border-top: 1px solid #eee;
+    gap: 0;
+    border-top: 1px solid #eee;
   }
   .countdown__wrap {
     gap: 10px;
   }
   .hero__image {
     max-width: max-content;
+  }
+  .hero__title {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+  .hero__description {
+    line-height: 1.3;
+  }
+  .slider {
+    padding-top: 30px;
+  }
+  .slider__title {
+    font-size: 25px;
+  }
+  .slider__subtitle {
+    line-height: 1.3;
   }
   button.button {
     width: 100%;
