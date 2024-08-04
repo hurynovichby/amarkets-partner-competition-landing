@@ -371,8 +371,6 @@ button.button:hover {
   margin: 6px 3px 0 0;
 }
 .slider__item-logo img {
-  width: 35px;
-  height: 35px;
   flex-grow: 0;
   object-fit: contain;
 }
