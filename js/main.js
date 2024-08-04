@@ -20,17 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     countdown.style.display = "none";
   });
 
-  var header = document.querySelector(".header");
-  var headerOffset = header.offsetTop;
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > headerOffset) {
-      header.classList.add("fixed");
-    } else {
-      header.classList.remove("fixed");
-    }
-  });
-
   // modal
   var modalOverlay = document.querySelector(".modal-overlay");
   var modalClose = document.querySelector(".modal__close");
