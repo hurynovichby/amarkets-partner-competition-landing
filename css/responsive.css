@@ -139,11 +139,22 @@
     padding-left: initial;
     padding-right: initial;
   }
+  .modal-overlay {
+    align-items: flex-start;
+  }
+  .modal {
+    width: 100%;
+    margin: 20px;
+  }
 }
 
 /* Стили для малых экранов (смартфоны) 320px */
 @media (max-width: 320px) {
   .countdown__wrap {
     gap: 10px;
+  }
+  .modal {
+    margin: 0;
+    height: 100%;
   }
 }

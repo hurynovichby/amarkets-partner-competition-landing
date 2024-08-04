@@ -35,7 +35,7 @@
             <div class="countdown__timer-label">Минут</div>
           </div>
         </div>
-        <div class="countdown__close">
+        <div class="button__close">
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L9 9" stroke="#1F252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M9 1L1 9" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -206,38 +206,60 @@
 
     </div>
     <div class="container">
-      <button class="slider__button button">Регистрация</button>
+      <button class="slider__button button open-modal-button">Регистрация</button>
     </div>
   </section>
 
-  <div class="modal">
-    <div class="modal__content">
-      <form class="modal__form">
-        <div class="modal__field">
-          <label for="name" class="modal__label">Имя*</label>
-          <input type="text" id="name" class="modal__input">
-        </div>
-        <div class="modal__field">
-          <label for="surname" class="modal__label">Фамилия*</label>
-          <input type="text" id="surname" class="modal__input">
-        </div>
-        <div class="modal__field">
-          <label for="email" class="modal__label">E-mail*</label>
-          <input type="email" id="email" class="modal__input">
-        </div>
-        <div class="modal__checkbox">
-          <input type="checkbox" id="agreement" class="modal__checkbox-input" checked>
-          <label for="agreement" class="modal__checkbox-label">Я прочел и принимаю условия Клиентского соглашения,
-            Политики конфиденциальности и Политики возврата денежных средств</label>
-        </div>
-        <button type="submit" class="modal__submit button">Отправить</button>
-      </form>
+  <!-- Затемненный фон -->
+  <div class="modal-overlay">
+    <!-- Модальное окно -->
+    <div class="modal">
+      <div class="modal__close button__close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L9 9" stroke="#1F252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M9 1L1 9" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="modal__content">
+        <div class="modal__title">Регистрация</div>
+        <form class="modal__form">
+          <div class="modal__field-wrap">
+            <div class="modal__field">
+              <label for="name" class="modal__label">Имя*</label>
+              <input type="text" id="name" class="modal__input" placeholder="Иван">
+            </div>
+            <div class="modal__field">
+              <label for="surname" class="modal__label">Фамилия*</label>
+              <input type="text" id="surname" class="modal__input" placeholder="Иванов">
+            </div>
+            <div class="modal__field">
+              <label for="email" class="modal__label">E-mail*</label>
+              <input type="email" id="email" class="modal__input" placeholder="unname@example.com">
+            </div>
+          </div>
+
+          <div class="modal__checkbox">
+            <input type="checkbox" id="agreement" class="modal__checkbox-input" checked>
+            <label for="agreement" class="modal__checkbox-label">
+              <span class="custom-checkbox">
+                <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="checkmark">
+                  <path d="M7.90028 1L3.90028 5L1.5 2.59972" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="modal__checkbox-text">Я прочел и принимаю условия <a href="#">Клиентского соглашения</a>,
+                <a href="#">Политики конфиденциальности</a> и <a href="#">Политики возврата</a> денежных средств</span>
+            </label>
+          </div>
+          
+          <button type="submit" class="modal__submit button">Отправить</button>
+        </form>
+      </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
-  <script src="js/sliders.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/sliders.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
